@@ -12,8 +12,8 @@ fake_countries = Faker(["de_DE", "fr_FR"])
 current_time = datetime.now()
 minutes_of_calls = random.randint(1, 40)
 
+
 def customer_care(entries=5):
-    
     
     for i in range(entries):
         data_entry = {
@@ -31,10 +31,6 @@ def customer_care(entries=5):
             "resolution_status": random.choice(resolutionStatus),
             "current_time": current_time,
             "end_call" : current_time + timedelta(minutes=minutes_of_calls)
-        
-            
-
-            
         }
         
         data.append(data_entry)
