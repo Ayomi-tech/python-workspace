@@ -7,10 +7,10 @@ from datetime import datetime, timedelta
 fake = Faker()
 data = []
 
-resolutionStatus = ["Backlog", "Blocked", "Resolved", "In-Progress", "In-progress_Urgent"]
+resolutionStatus = ["Backlog", "Blocked", "Resolved", "In-Progress", "In-Progress-Urgent"]
 fake_countries = Faker(["de_DE", "fr_FR"])
 current_time = datetime.now()
-minutes_of_calls = random.randint(1, 40)
+minutes_of_calls = random.randint(1, 30)
 
 
 def customer_care(entries=5):
@@ -21,15 +21,15 @@ def customer_care(entries=5):
             "customer_id": uuid.uuid1(), #128 bits
             "first_name": fake_countries.first_name(),
             "last_name" : fake_countries.last_name(),
+            "age": fake.random_int(min=20, max=80),
             "job": fake.job(),
-            "age": fake.random_int(min=20, max=85),
             "Email": fake.email(),
             "phone_number": fake_countries.phone_number(),
             "country_code": fake_countries.current_country_code(),
             "address": fake_countries.address(),
             "agent_id": random.randint(1,10_000),
             "resolution_status": random.choice(resolutionStatus),
-            "current_time": current_time,
+            "start_time": current_time,
             "end_call" : current_time + timedelta(minutes=minutes_of_calls)
         }
         
