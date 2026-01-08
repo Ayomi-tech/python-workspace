@@ -17,8 +17,8 @@ def customer_care(entries=5):
     
     for i in range(entries):
         data_entry = {
-            "call_id": uuid.uuid4(), #122 bit
-            "customer_id": uuid.uuid1(), #128 bits
+            "call_id": str(uuid.uuid4()), #122 bit
+            "customer_id": str(uuid.uuid1()), #128 bits
             "first_name": fake_countries.first_name(),
             "last_name" : fake_countries.last_name(),
             "age": fake.random_int(min=20, max=80),
