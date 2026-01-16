@@ -9,3 +9,4 @@ def import_json():
         champions = champion['data']
 
         return champions
+
