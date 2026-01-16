@@ -8,7 +8,6 @@ greater_than_5 = []
 for pages in champs:
     champions_details = champs[pages]
     
-    
     champ_data= {
         'name' :champions_details['name'],
         'title' :champions_details['title'],
