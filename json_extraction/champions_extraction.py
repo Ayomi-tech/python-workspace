@@ -19,7 +19,6 @@ def filtered_champions():
 
     return greater_than_5
 
-
 names = pd.json_normalize(filtered_champions())
 print(f" The len of the filter data is: ",len(names))
 print(names.head(5))
