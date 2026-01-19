@@ -14,7 +14,7 @@ def filtered_champions():
             'attack' : champions_details['info']['attack'],
             'defense' :champions_details['info']['defense'],
         }
-        if champ_data['attack'] > 5 | champ_data['defense'] > 5:
+        if champ_data['attack'] > 5 & champ_data['defense'] > 5:
             greater_than_5.append(champ_data)
 
     return greater_than_5
