@@ -1,6 +1,3 @@
-import pandas as pd
-import numpy as np
-
 from import_data import import_file
 
 main_data = import_file()
@@ -12,19 +9,17 @@ main_data = import_file()
 
     # return data
 
-
-
 duplicate_values = []
 
+
 def deduplicatio(data, column):
-    
+
     duplicate = data[data.duplicated(column)]
-    
+
     if len(duplicate) >= 1:
         duplicate_values.append(duplicate)
         raise ValueError(f"There is a duplicate value in the {column} field")
-        
+
     return duplicate
 
 print(deduplicatio(main_data, 'Customer ID'))
-
