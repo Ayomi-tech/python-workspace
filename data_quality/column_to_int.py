@@ -1,11 +1,10 @@
 import pandas as pd
 
-from to_lowercase_dropna import import_file
+from to_lowercase_dropna import to_lowercase_dropna
+from import_data import read_file
 
-main_data = import_file()
 
-
-def convert_to_int(data, column_name):
+def convert_to_int(data, column_name)-> pd.DataFrame:
 
     '''
     Convert column to int and return the defined error
@@ -21,4 +20,7 @@ def convert_to_int(data, column_name):
 
     return data
 
-print(convert_to_int(main_data, 'PricE'))
+
+main_data = to_lowercase_dropna(read_file())
+
+print(convert_to_int(main_data, 'price'))
