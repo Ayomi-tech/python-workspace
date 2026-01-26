@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def import_file():
+def read_file():
     data = pd.read_csv("data_quality.csv")
 
     return data
