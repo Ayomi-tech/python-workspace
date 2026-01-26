@@ -1,6 +1,7 @@
-from import_data import import_file
+from import_data import read_file
+from to_lowercase_dropna import to_lowercase_dropna
+import pandas as pd
 
-main_data = import_file()
 
 # def deduplication(data, column):
 
@@ -12,7 +13,7 @@ main_data = import_file()
 duplicate_values = []
 
 
-def deduplicatio(data, column):
+def deduplicatio(data, column)-> pd.DataFrame:
 
     duplicate = data[data.duplicated(column)]
 
@@ -22,4 +23,6 @@ def deduplicatio(data, column):
 
     return duplicate
 
-print(deduplicatio(main_data, 'Customer ID'))
+main_data = to_lowercase_dropna(read_file())
+
+print(deduplicatio(main_data, 'customer_id'))
