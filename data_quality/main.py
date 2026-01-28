@@ -10,7 +10,7 @@ def main():
 
     new_data = to_lowercase_dropna(main_data)
 
-    duplicate_value = deduplicatio(new_data, 'Customer ID')
+    # duplicate_value = deduplicatio(new_data, 'Customer ID')
     
     mismatched_value = convert_to_int(main_data)
 
