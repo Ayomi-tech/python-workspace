@@ -1,4 +1,0 @@
-awswrangler==3.14.0
-Faker==39.0.0
-flake8==7.3.0
-isort==7.0.0
